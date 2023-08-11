@@ -1,0 +1,21 @@
+@import '@/common/css/variable.scss';
+
+.home-section {
+  padding: 4rem 0;
+  font-family: 'Gilroy-Medium';
+  color: $color-white;
+  .inner {
+    max-width: 54rem;
+    margin: 0 auto;
+    @media (max-width: 768.89px) {
+      max-width: none;
+      margin: 0 1rem;
+    }
+  }
+  .title {
+    font-family: 'Gilroy-Bold';
+    font-size: 2rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+}

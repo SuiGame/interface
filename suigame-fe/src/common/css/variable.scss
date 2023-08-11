@@ -1,0 +1,75 @@
+$color-purple: #9174ff;
+$color-blue: #4aa3ff;
+$color-red: #e85757;
+
+$color-white: #fff;
+$color-gray: #999;
+$color-black: #000;
+
+$color-primary: #212121;
+$color-secondary: #717a83;
+
+$color-border: #e5e8eb;
+
+$color-placeholder: #fbfbfb;
+$color-placeholder6: #f6f6f6;
+
+@mixin ellipsis($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if $line > 1 {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  } @else {
+    white-space: nowrap;
+  }
+}
+
+@mixin btn-fill-color() {
+  padding: 0 0.7rem;
+  color: $color-white;
+  background-image: linear-gradient(90deg, #00aaff 0%, #df01ff 100%);
+  border: 0 none;
+  border-radius: 0.5rem;
+  @media (max-width: 768.89px) {
+    border-radius: 0.3rem;
+  }
+  &:hover {
+    color: $color-white;
+  }
+}
+
+@mixin btn-fill-pure($color-background: $color-blue) {
+  padding: 0 0.7rem;
+  color: $color-white;
+  background-color: $color-background;
+  border: 0 none;
+  border-radius: 0.5rem;
+  @media (max-width: 768.89px) {
+    border-radius: 0.3rem;
+  }
+}
+
+@mixin btn-stroke-pure(
+  $color: $color-blue,
+  $color-border: $color-border,
+  $color-hover: $color-blue,
+  $color-hover-border: $color-blue
+) {
+  padding: 0 0.7rem;
+  color: $color;
+  border: 0.05rem solid $color-border;
+  border-radius: 0.5rem;
+  @media (max-width: 768.89px) {
+    border-radius: 0.3rem;
+  }
+  &:hover {
+    color: $color-hover;
+    border-color: $color-hover-border;
+  }
+  &.disabled {
+    color: $color-white;
+  }
+}
